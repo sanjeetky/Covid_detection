@@ -1,44 +1,81 @@
 
 
-# Pneumonia Detection using CNN based classification 
+# Covid-19 Detection from Chest X-ray scans using CNN
 
-Pneumonia Detection using CNN based classification model trained on chest x-ray scans of normal and people diagnosed with pneumonia. We trained a Convolutional Neural Network designed to process these x-ray images of the chest with pre-classified labels from the training set to replicate those results on the test set.
+Covid Detection using CNN based classification model trained on chest x-ray scans of normal and people diagnosed with covid. We trained a Convolutional Neural Network designed to process these x-ray images of the chest with pre-classified labels from the training set to replicate those results on the test set.
 
 
 
 ## Data Visualization & Preprocessing
+
+# Dataset 1
+
+This is the first dataset we have used for training our model. It has around 6000 chest x-ray images of different people belonging to two different classes, normal or sick. 
 
 
 We trained on a dataset of:
 
 - over 5216 total x-ray images
 - 1341 x-ray images of normal class
-- 3875 x-ray images of pneumonia class
+- 3875 x-ray images of covid class
 - highly imbalanced
-
-We tested on a dataset of:
-
-- over 624 total x-ray images
-- 234 x-ray images of normal class
-- 390 x-ray images of pneumonia class
-
-
-For more info on the data: https://data.mendeley.com/datasets/rscbjbr9sj/2
-
-License: https://creativecommons.org/licenses/by/4.0/
 
 
 Images from both the classes
 
 <img src="nb_images/normal.png" style="width:700px;height:400;">
-<img src="nb_images/pnm.png" style="width:700px;height:400;">
+<img src="nb_images/covid.png" style="width:700px;height:400;">
 
 
 Visualizing the data
 
 <img src="nb_images/index.png" style="width:700px;height:400;">
 
-As you can clearly see the data is imbalanced. Training a model on this imbalanced data would result in naive behaviour where the model would be always favoring the pneumonia class and still produce a decent accuracy but such results would be useless. To avoid this overfitting, we will increase the number of training examples using data augmentation.
+Performance
+
+- Training set accuracy = 95.48%	    
+- Test set accuracy = 85.4%
+
+<img src="nb_images/acc1.png" style="width:700px;height:400;">
+<img src="nb_images/loss1.png" style="width:700px;height:400;">
+
+As you can clearly see the data is imbalanced. Training a model on this imbalanced data would result in naive behaviour where the model would be always favoring the covid class and still produce a decent accuracy but such results would be useless. To avoid this overfitting, we will increase the number of training examples using data augmentation.
+
+
+# Dataset 2
+
+This is the second dataset we have used for training our model. It has around 21000 chest x-ray images of different people belonging to four different classes. 
+
+
+We trained on a dataset of:
+
+- 10192 x-ray images of Normal class
+- 3616 x-ray images of Covid class
+- 6012 x-ray images of Lung opacity class (non-covid lung infection)
+- 1345 x-ray images of Viral Pneumonia class
+
+
+
+Images from both the classes
+
+<img src="nb_images/normal2.png" style="width:700px;height:400;">
+<img src="nb_images/covid2.png" style="width:700px;height:400;">
+<img src="nb_images/normallung_opacity.png" style="width:700px;height:400;">
+<img src="nb_images/viral_pneumonia.png" style="width:700px;height:400;">
+
+
+Visualizing the data
+
+<img src="nb_images/index2.png" style="width:700px;height:400;">
+
+
+Performance
+
+- Training set accuracy = 98.65%	    
+- Test set accuracy = 92.98%
+
+<img src="nb_images/acc2.png" style="width:700px;height:400;">
+<img src="nb_images/loss2.png" style="width:700px;height:400;">
 
 
 
@@ -76,7 +113,7 @@ _________________________________________________________________
 #### Inputs and output
 
 - The **input** is a batch of images and each image has a shape (150,150,1).
-- The **output** represents a binary classification of the input images as 1 (Pneumonia) or 0 (Normal).
+- The **output** represents a binary classification of the input images as 1 (Covid) or 0 (Normal).
 
 
 ## Results
@@ -85,15 +122,15 @@ On the test set, we achieved:
 
 - Accuracy  = 0.92
 - F1-score  = 0.92
-- Recall    = 0.93
-- Precision = 0.91 
+- Recall    = 0.90
+- Precision = 0.98 
 
 
 # Model type conversion
 
 The model was converted into a TFLite model using the TFLiteConverter for deploying it to android Apps.
 
-## Stay Healthy App
+## Covid Testing App
 
 - The app uses the generated tflite model for image classification. 
 - User Uploads the chest X-ray of the person.
