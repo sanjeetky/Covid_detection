@@ -36,8 +36,8 @@ Performance
 - Training set accuracy = 95.48%	    
 - Test set accuracy = 85.4%
 
-<img src="nb_images/acc1.png" style="width:700px;height:400;">
-<img src="nb_images/loss1.png" style="width:700px;height:400;">
+<img src="nb_images/acc1.png" style="width:350px;height:200;">
+<img src="nb_images/loss1.png" style="width:350px;height:200;">
 
 As you can clearly see the data is imbalanced. Training a model on this imbalanced data would result in naive behaviour where the model would be always favoring the covid class and still produce a decent accuracy but such results would be useless. To avoid this overfitting, we will increase the number of training examples using data augmentation.
 
@@ -74,8 +74,8 @@ Performance
 - Training set accuracy = 98.65%	    
 - Test set accuracy = 92.98%
 
-<img src="nb_images/acc2.png" style="width:350px;height:200;">
-<img src="nb_images/loss2.png" style="width:350px;height:200;">
+<img src="nb_images/acc2.png" style="width:700px;height:400;">
+<img src="nb_images/loss2.png" style="width:700px;height:400;">
 
 
 
@@ -143,6 +143,6 @@ The model was converted into a TFLite model using the TFLiteConverter for deploy
 
 ## Screenshots
 
-<img src="https://github.com/ishan18/Pneumonia_classification/blob/master/screenshots/home.jpeg" alt="Home Screen" width="250px" height="400px">
-<img src="https://github.com/ishan18/Pneumonia_classification/blob/master/screenshots/pneumonia.jpeg" alt="Pneumonia classification" width="250px" height="400px">
-<img src="https://github.com/ishan18/Pneumonia_classification/blob/master/screenshots/normal.jpeg" alt="Normal classification" width="250px" height="400px">
+<img src="https://github.com/sanjeetky/Covid_detection/blob/master/screenshots/home.jpeg" alt="Home Screen" width="250px" height="400px">
+<img src="https://github.com/sanjeetky/Covid_detection/blob/master/screenshots/covid.jpeg" alt="Covid classification" width="250px" height="400px">
+<img src="https://github.com/sanjeetky/Covid_detection/blob/master/screenshots/normal.jpeg" alt="Normal classification" width="250px" height="400px">

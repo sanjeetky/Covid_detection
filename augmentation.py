@@ -19,7 +19,7 @@ datagen = ImageDataGenerator(
     samplewise_center=False,  # set each sample mean to 0
     featurewise_std_normalization=False,  # divide inputs by std of the dataset
     samplewise_std_normalization=False,  # divide each input by its std
-    zca_whitening=False,  # apply ZCA whitening
+    zca_wh-itening=False,  # apply ZCA whitening
     # randomly rotate images in the range (degrees, 0 to 180)
     rotation_range=30,
     zoom_range=0.2,  # Randomly zoom image

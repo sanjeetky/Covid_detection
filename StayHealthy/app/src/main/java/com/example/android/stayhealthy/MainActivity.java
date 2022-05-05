@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     final int IMAGE_SHAPE=150;
     final int IMAGE_LOAD_REQUEST=2;
     final int READ_STORAGE_PERMISSION=3;
-    final String PNEUMONIA="pneumonia";
+    final String COVID="covid";
     final String NORMAL="normal";
     ImageButton info;
 
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         FloatBuffer probabilities = modelOutput.asFloatBuffer();
         String finalLabel="";
         if(probabilities.get(0)>=0.5){
-            finalLabel=PNEUMONIA;
+            finalLabel=COVID;
         }else{
             finalLabel=NORMAL;
         }
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             classified.setText(s);
-            if(s.equals(PNEUMONIA))
+            if(s.equals(COVID))
                 classified.setTextColor(getResources().getColor(R.color.red));
             else
                 classified.setTextColor(getResources().getColor(R.color.green));
