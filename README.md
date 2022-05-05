@@ -60,7 +60,7 @@ Images from both the classes
 
 <img src="nb_images/normal2.png" style="width:700px;height:400;">
 <img src="nb_images/covid2.png" style="width:700px;height:400;">
-<img src="nb_images/normallung_opacity.png" style="width:700px;height:400;">
+<img src="nb_images/lung_opacity.png" style="width:700px;height:400;">
 <img src="nb_images/viral_pneumonia.png" style="width:700px;height:400;">
 
 
