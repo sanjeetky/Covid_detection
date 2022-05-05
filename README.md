@@ -74,8 +74,8 @@ Performance
 - Training set accuracy = 98.65%	    
 - Test set accuracy = 92.98%
 
-<img src="nb_images/acc2.png" style="width:700px;height:400;">
-<img src="nb_images/loss2.png" style="width:700px;height:400;">
+<img src="nb_images/acc2.png" style="width:350px;height:200;">
+<img src="nb_images/loss2.png" style="width:350px;height:200;">
 
 
 
